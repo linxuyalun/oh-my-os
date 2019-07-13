@@ -1,6 +1,6 @@
 # Preconfiguration of Centos7
 # Author: Yalun Lin Hsu, empowered by Thrimbda
-# Last Modified: 2019-06-27
+# Last Modified: 2019-07-13
 
 set -e
 
@@ -11,9 +11,15 @@ yum update -y && yum install -y curl \
     vim \
     tmux
 
-yum install -y python36 \
-    python36-pip
+# Install Python3.6
+yum install -y https://centos7.iuscommunity.org/ius-release.rpm
 
+yum install -y python36u python36u-pip  # Your command will be python3.6 and pip3.6
+
+pip3.6 install --upgrade pip
+
+# Install pipenv if you need
+# pip3.6 install pipenv
 
 # Install Docker
 yum install -y yum-utils \
