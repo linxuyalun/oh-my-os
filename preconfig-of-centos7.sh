@@ -5,7 +5,7 @@
 set -e
 
 yum update -y && yum install -y curl \
-    wget
+    wget \
     htop \
     zsh \
     git \
